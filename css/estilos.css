@@ -71,12 +71,24 @@ h3, a, p {
     font-weight: bold;
     user-select: none;
 }
+
+.pantalla-completa {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    
+    background-color: rgba(0, 0, 0, .5);
+}
 .btn-cerrar:hover {
     cursor: pointer;
 }
 /* encabzado */
 .contenedor-navegacion {
     background-color: var(--negro);
+    position: relative;
+    z-index: 5;
 }
 .contenido-navegacion {
     display: flex;
@@ -110,6 +122,7 @@ h3, a, p {
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100vh;
     width: 35rem;
     padding: 3rem, 4rem;
     background-color: var(--negro);

@@ -19,17 +19,26 @@ const abrirMenu = () => {
 
 const botonCerrar = () => {
     const btnCerrar = document.createElement('P');
+    const overlay = document.createElement('div');
+    overlay.classList.add('pantalla-completa');
+    const body = document.querySelector('body');
+    if(document.querySelectorAll('.pantalla-completa').length > 0) return;
+    body.appendChild(overlay);
     btnCerrar.textContent = 'x';
     btnCerrar.classList.add('btn-cerrar');
-    console.log(btnCerrar);
     navegacion.appendChild(btnCerrar);
-    cerrarMenu(btnCerrar);
+    cerrarMenu(btnCerrar,overlay);
 }
 
-const cerrarMenu = () => {
-    botton.addEventListener('click',() => {
+const cerrarMenu = (boton,overlay) => {
+    boton.addEventListener('click',() => {
         navegacion.classList.add('ocultar');
-    })
+        overlay.remove();
+    });
+
+    overlay.addEventListener('click',() => {
+        navegacion.classList.add('ocultar');
+        overlay.remove();
+    });
 }
 
-// minuto 1:22

@@ -26,6 +26,7 @@ const botonCerrar = () => {
     body.appendChild(overlay);
     btnCerrar.textContent = 'x';
     btnCerrar.classList.add('btn-cerrar');
+
     navegacion.appendChild(btnCerrar);
     cerrarMenu(btnCerrar,overlay);
 }
@@ -34,11 +35,13 @@ const cerrarMenu = (boton,overlay) => {
     boton.addEventListener('click',() => {
         navegacion.classList.add('ocultar');
         overlay.remove();
+        boton.remove();
     });
 
     overlay.addEventListener('click',() => {
         navegacion.classList.add('ocultar');
         overlay.remove();
+        boton.remove();
     });
 }
 

@@ -29,6 +29,7 @@ html {
 }
 body {
     font-size: 1.6rem;
+    overflow: hidden;
 }
 
 
@@ -81,6 +82,16 @@ h3, a, p {
     
     background-color: rgba(0, 0, 0, .5);
 }
+
+@keyframes desplazarIzquierda {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+    
+}
 .btn-cerrar:hover {
     cursor: pointer;
 }
@@ -107,16 +118,29 @@ h3, a, p {
 .navegacion a:nth-child(1) {
     margin-top: 6rem;
 }
+
+
+/* alinecion para tabletas */
+@media(min-widt: 768px) {
+    .navegacion a {
+        text-align: left;
+    }
+}
+/* alineacion para celulares */
+
 .navegacion a {
     color: var(--blanco);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin: 5px;
     display: block;
-    margin: 2rem;
+    padding: 1rem;
+    margin: 3rem;
     margin-left: 3rem;
     transition: ease-in-out;
+    text-align: center;
 }
+
 .navegacion {
     position: absolute;
     top: 0;
@@ -126,9 +150,7 @@ h3, a, p {
     width: 35rem;
     padding: 3rem, 4rem;
     background-color: var(--negro);
-    
-
-    
+    animation: desplazarIzquierda .3s ease-in-out;
 }
 
 .navegacion a:nth-child(even):hover{
@@ -138,6 +160,9 @@ h3, a, p {
     color: var(--verde);
 }
 
+.hamburguesa:hover {
+    cursor: pointer;
+}
 .hamburguesa span {
     background-color: var(--blanco);
     display: block;

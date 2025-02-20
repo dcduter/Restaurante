@@ -1,0 +1,136 @@
+/* importamos fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* creamos paleta de colores */
+:root {
+    --violeta: #9c27b0;
+    --violetaOscuro: #89119d;
+    --verde: #4caf50;
+    --secundario: #ffce00;
+    --secundarioOscuro: rgb(233, 287, 2);
+    --blanco: #fff;
+    --negro: #000;
+    --gris: #6e6e6e;
+    --titulos: 'Arima', cursive;
+    --parrafos: 'Mulish', sans-serif;
+}
+
+p {
+    font-family: var(--titulos);
+}
+
+/* el contenido se ajusta al tamaño de la caja */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1em = 10px */
+
+    
+}
+body {
+    font-size: 1.6rem;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* globales */
+
+.contenedor {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: var(--titulos);
+}
+h3, a, p {
+    font-family: var(--parrafos);
+}
+.verde {
+    color: var(--verde);
+}
+
+.rojo {
+    color: red;
+}
+.ocultar {
+    display: none;
+}
+.btn-cerrar {
+    font-size: 2rem;
+    color: var(--blanco);
+    position: absolute;
+    top: 0;
+    right: 0;
+    right: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    user-select: none;
+}
+.btn-cerrar:hover {
+    cursor: pointer;
+}
+/* encabzado */
+.contenedor-navegacion {
+    background-color: var(--negro);
+}
+.contenido-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo h1 {
+    color: var(--blanco);
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+}
+
+.navegacion a:nth-child(1) {
+    margin-top: 6rem;
+}
+.navegacion a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 5px;
+    display: block;
+    margin: 2rem;
+    margin-left: 3rem;
+    transition: ease-in-out;
+}
+.navegacion {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35rem;
+    padding: 3rem, 4rem;
+    background-color: var(--negro);
+    
+
+    
+}
+
+.navegacion a:nth-child(even):hover{
+    color: red;
+}
+.navegacion a:nth-child(odd):hover{
+    color: var(--verde);
+}
+
+.hamburguesa span {
+    background-color: var(--blanco);
+    display: block;
+    width: 5rem;
+    height: .5rem;
+    margin-bottom: .5rem;
+
+}
+

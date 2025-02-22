@@ -72,7 +72,22 @@ h3, a, p {
     font-weight: bold;
     user-select: none;
 }
+.btn{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+}
 
+.borde {
+    border: 4px solid var(--blanco);
+}
+.borde:hover {
+    color: var(--verde);
+    background-color: var(--blanco);
+}
 .pantalla-completa {
     position: absolute;
     left: 0;
@@ -172,3 +187,45 @@ h3, a, p {
 
 }
 
+/* video */
+
+.contenido-header {
+    position: relative;
+    /* contenedor padre */
+}
+
+.contenido-header::before {
+    /* contenedor hijo */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    /* oscurece el video */
+
+}
+
+.texto-encabezado{
+    position: absolute; /* para que se ponga encima del video */
+    z-index: 2; /* para que se vea encima del video */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;/* para que se ubique uno al lado del otro */
+    text-align: center;
+    justify-content: center;
+
+}
+
+.texto-encabezado h2 {
+
+    color: var(--blanco);
+    font-size: 8rem;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}

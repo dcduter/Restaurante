@@ -57,6 +57,14 @@ h3, a, p {
     font-family: var(--parrafos);
 }
 
+p.texto-pizza {
+    text-transform: lowercase; /* Texto en minúscula */
+  }
+   
+  p.texto-pizza:first-letter { /* permite personalizar la primera letra en este caso en mayúscula */
+    text-transform: uppercase; 
+  }
+
 /* Colores personalizados */
 .verde {
     color: var(--verde);

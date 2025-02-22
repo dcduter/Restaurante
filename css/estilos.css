@@ -137,6 +137,12 @@ h3, a, p {
     color: var(--verde); /* Cambia el color al pasar el mouse */
     background: linear-gradient(to right,#060606, #ffffff, #000000); /* Cambia a un gradiente al pasar el mouse */
 }
+.btn-rojo{
+    background-color: rgb(143, 11, 11);
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 3rem;
+}
 
 /* Estilos para el encabezado de navegación */
 .contenedor-navegacion {
@@ -268,4 +274,40 @@ h3, a, p {
 video {
     width: 100%; /* Ancho completo */
     height: 100%; /* Alto completo */
+}
+/* sobre nosotros */
+.contenedor-nosotros {
+     display: flex;
+     justify-content: space-between;
+     padding-top: 5rem;
+}
+.texto-nosotros, .imagenes-nosotros {
+    flex: 0 0 calc(50% - 1rem); /* Flexbox para disposición */
+
+}
+.texto-nosotros .bienvenida {
+    font-size: 3rem;
+    color: var(--verde);
+}
+.texto-nosotros h1 {
+    font-size: 5rem;
+}
+.texto-nosotros p {
+    font-size: 2rem;
+    color: var(--gris);
+}
+.imagenes-nosotros img {
+    border-radius: 7px;
+}
+.imagenes-nosotros  {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.imagen1, .imagenes2 {
+    flex: 0 0 calc(50% - 1rem);
+}
+.imagenes2 img {
+    margin-bottom: 1rem;
 }

@@ -102,20 +102,24 @@ h3, a, p {
     color: var(--blanco);
     font-size: 3.2rem;
     text-transform: capitalize;
-    padding: 1rem 3rem;
+    padding: 1rem 9rem;
     border-radius: 5px;
     transition: all .3s ease-in-out;
+
 }
+
 /* boton menu */
 .border {
     border: 4px solid var(--blanco);
     justify-content: center;
+    
 
 }
 /* boton menu */
-.borde:hover {
+.border:hover {
     color: var(--verde);
     background-color: var(--blanco);
+    
 }
 /* encabzado */
 .contenedor-navegacion {

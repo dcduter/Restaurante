@@ -29,7 +29,8 @@ html {
 
 body {
     font-size: 1.6rem; /* Tamaño de fuente base */
-    overflow: hidden; /* Oculta el desbordamiento */
+    overflow-x: hidden;
+
 }
 
 /* Establece el box-sizing para todos los elementos */
@@ -42,6 +43,10 @@ body {
     max-width: 120rem; /* Ancho máximo del contenedor */
     width: 95%; /* Ancho del contenedor */
     margin: 0 auto; /* Centra el contenedor */
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Estilos para encabezados y enlaces */
@@ -63,7 +68,9 @@ h3, a, p {
 
 .ocultar {
     display: none; /* Oculta elementos */
+
 }
+
 
 /* Estilos para el botón de cerrar */
 .btn-cerrar {
@@ -86,6 +93,7 @@ h3, a, p {
     bottom: 0;
     right: 0;
     background-color: rgba(0, 0, 0, .5); /* Fondo oscuro */
+
 }
 
 /* Animación para desplazar a la izquierda */
@@ -102,23 +110,32 @@ h3, a, p {
 .btn {
     text-decoration: none; /* Sin subrayado */
     color: var(--blanco); /* Color del texto */
-    font-size: 3.2rem; /* Tamaño de fuente */
+    font-size: 2.2rem; /* Tamaño de fuente */
     text-transform: capitalize; /* Capitaliza el texto */
     padding: 1rem 9rem; /* Espaciado interno */
     border-radius: 5px; /* Bordes redondeados */
     transition: all .3s ease-in-out; /* Transición suave */
+    
+}
+@media(min-width: 768px) {
+    .btn {
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    
+
 }
 
 /* Estilo para el borde del botón */
 .border {
-    border: 4px solid var(--blanco); /* Borde blanco */
+    /* border: 4px solid var(--blanco); Borde blanco */
     justify-content: center; /* Centra el contenido */
 }
 
 /* Efecto hover para el borde del botón */
 .border:hover {
     color: var(--verde); /* Cambia el color al pasar el mouse */
-    background-color: var(--blanco); /* Cambia el fondo al pasar el mouse */
+    background: linear-gradient(to right,#060606, #ffffff, #000000); /* Cambia a un gradiente al pasar el mouse */
 }
 
 /* Estilos para el encabezado de navegación */
@@ -132,6 +149,7 @@ h3, a, p {
     display: flex; /* Flexbox para disposición */
     justify-content: space-between; /* Espacio entre elementos */
     align-items: center; /* Alinea verticalmente */
+
 }
 
 /* Estilo para el logo */
@@ -179,6 +197,7 @@ h3, a, p {
     padding: 3rem, 4rem; /* Espaciado interno */
     background-color: var(--negro); /* Fondo negro */
     animation: desplazarIzquierda .3s ease-in-out; /* Animación */
+    
 }
 
 /* Efectos hover para enlaces de navegación */
@@ -192,6 +211,7 @@ h3, a, p {
 /* Estilo para el icono de hamburguesa */
 .hamburguesa:hover {
     cursor: pointer; /* Cambia el cursor al pasar el mouse */
+
 }
 .hamburguesa span {
     background-color: var(--blanco); /* Fondo blanco */
@@ -199,6 +219,7 @@ h3, a, p {
     width: 5rem; /* Ancho */
     height: .5rem; /* Alto */
     margin-bottom: .5rem; /* Margen inferior */
+ 
 }
 
 /* Estilos para el video */
@@ -232,12 +253,15 @@ h3, a, p {
 /* Estilo para el título del encabezado */
 .texto-encabezado h2 {
     color: var(--blanco); /* Color blanco */
-    font-size: 8rem; /* Tamaño de fuente */
+    font-size: 4rem; /* Tamaño de fuente */
 }
 
 /* Consulta de medios para pantallas más grandes */
 @media(min-width: 768px) {
     /* Aquí se pueden agregar estilos específicos para pantallas más grandes */
+    .texto-encabezado h2 {
+        font-size: 8rem; /* Tamaño de fuente */
+    }
 }
 
 /* Estilos para el video */

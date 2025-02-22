@@ -397,3 +397,45 @@ video {
         flex:unset;
     }
 }
+
+/* platillos  en columnas de tres*/
+@media(min-width:768px) { /* permite divider en tres columnas si la pantalla es de 768 o mas */
+    .platillos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.platillo {
+    flex: 0 0 calc(33.3% - 1rem);
+    border-radius: 5px;
+    border: 2px solid rgb(217, 213, 213);
+    padding: 3rem;
+    margin-bottom: 1.5rem;
+}
+.platillo h2 {
+    text-align: center;
+}
+
+.platillo p {
+    font-size: 1.8rem;
+}
+
+/* area de precios */
+.precion {
+    display: flex;
+    justify-content: space-between;
+}
+.precion p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.precio button {
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: brown;
+    color: var(--blanco);
+    font-family: var(--parrafos);
+}

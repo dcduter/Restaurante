@@ -4,53 +4,55 @@
 
 /* creamos paleta de colores */
 :root {
-    --violeta: #9c27b0;
-    --violetaOscuro: #89119d;
-    --verde: #4caf50;
-    --secundario: #ffce00;
-    --secundarioOscuro: rgb(233, 287, 2);
-    --blanco: #fff;
-    --negro: #000;
-    --gris: #6e6e6e;
-    --titulos: 'Arima', cursive;
-    --parrafos: 'Mulish', sans-serif;
+    --violeta: #9c27b0; /* Color violeta */
+    --violetaOscuro: #89119d; /* Color violeta oscuro */
+    --verde: #4caf50; /* Color verde */
+    --secundario: #ffce00; /* Color secundario */
+    --secundarioOscuro: rgb(233, 287, 2); /* Color secundario oscuro */
+    --blanco: #fff; /* Color blanco */
+    --negro: #000; /* Color negro */
+    --gris: #6e6e6e; /* Color gris */
+    --titulos: 'Arima', cursive; /* Fuente para títulos */
+    --parrafos: 'Mulish', sans-serif; /* Fuente para párrafos */
 }
 
+/* Establece la fuente para los párrafos */
 p {
     font-family: var(--titulos);
 }
 
-/* el contenido se ajusta al tamaño de la caja */
+/* Ajusta el tamaño del contenido al tamaño de la caja */
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1em = 10px */
-
-    
 }
+
 body {
-    font-size: 1.6rem;
-    overflow: hidden;
+    font-size: 1.6rem; /* Tamaño de fuente base */
+    overflow: hidden; /* Oculta el desbordamiento */
 }
 
-
+/* Establece el box-sizing para todos los elementos */
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-/* globales */
-
+/* Estilos globales */
 .contenedor {
-    max-width: 120rem;
-    width: 95%;
-    margin: 0 auto;
+    max-width: 120rem; /* Ancho máximo del contenedor */
+    width: 95%; /* Ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
 }
 
+/* Estilos para encabezados y enlaces */
 h1, h2 {
     font-family: var(--titulos);
 }
 h3, a, p {
     font-family: var(--parrafos);
 }
+
+/* Colores personalizados */
 .verde {
     color: var(--verde);
 }
@@ -58,185 +60,188 @@ h3, a, p {
 .rojo {
     color: red;
 }
+
 .ocultar {
-    display: none;
+    display: none; /* Oculta elementos */
 }
+
+/* Estilos para el botón de cerrar */
 .btn-cerrar {
     font-size: 2rem;
     color: var(--blanco);
-    position: absolute;
+    position: absolute; /* Posicionamiento absoluto */
     top: 0;
     right: 0;
-    right: 40px;
+    right: 40px; /* Ajuste de posición */
     font-size: 2.5rem;
-    font-weight: bold;
-    user-select: none;
+    font-weight: bold; /* Negrita */
+    user-select: none; /* Evita la selección de texto */
 }
 
+/* Estilos para pantalla completa */
 .pantalla-completa {
-    position: absolute;
+    position: absolute; /* Posicionamiento absoluto */
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .5); /* Fondo oscuro */
 }
 
+/* Animación para desplazar a la izquierda */
 @keyframes desplazarIzquierda {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%); /* Comienza fuera de la pantalla */
     }
     100% {
-        transform: translateX(0);
+        transform: translateX(0); /* Termina en su posición original */
     }
-    
-}
-.btn-cerrar:hover {
-    cursor: pointer;
 }
 
-/* boton menu */
-.btn{
-    text-decoration: none;
-    color: var(--blanco);
-    font-size: 3.2rem;
-    text-transform: capitalize;
-    padding: 1rem 9rem;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-
+/* Estilo para el botón del menú */
+.btn {
+    text-decoration: none; /* Sin subrayado */
+    color: var(--blanco); /* Color del texto */
+    font-size: 3.2rem; /* Tamaño de fuente */
+    text-transform: capitalize; /* Capitaliza el texto */
+    padding: 1rem 9rem; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all .3s ease-in-out; /* Transición suave */
 }
 
-/* boton menu */
+/* Estilo para el borde del botón */
 .border {
-    border: 4px solid var(--blanco);
-    justify-content: center;
-    
-
+    border: 4px solid var(--blanco); /* Borde blanco */
+    justify-content: center; /* Centra el contenido */
 }
-/* boton menu */
+
+/* Efecto hover para el borde del botón */
 .border:hover {
-    color: var(--verde);
-    background-color: var(--blanco);
-    
+    color: var(--verde); /* Cambia el color al pasar el mouse */
+    background-color: var(--blanco); /* Cambia el fondo al pasar el mouse */
 }
-/* encabzado */
+
+/* Estilos para el encabezado de navegación */
 .contenedor-navegacion {
-    background-color: var(--negro);
-    position: relative;
-    z-index: 5;
+    background-color: var(--negro); /* Fondo negro */
+    position: relative; /* Posicionamiento relativo */
+    z-index: 5; /* Asegura que esté por encima de otros elementos */
 }
+
 .contenido-navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    display: flex; /* Flexbox para disposición */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinea verticalmente */
 }
 
+/* Estilo para el logo */
 .logo h1 {
-    color: var(--blanco);
-    font-size: 4rem;
-    text-align: center;
-    margin: 0;
+    color: var(--blanco); /* Color blanco */
+    font-size: 4rem; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Sin margen */
 }
 
+/* Margen superior para el primer enlace de navegación */
 .navegacion a:nth-child(1) {
     margin-top: 6rem;
 }
 
-
-/* alinecion para tabletas */
-@media(min-widt: 768px) {
+/* Alineación para tabletas */
+@media(min-width: 768px) {
     .navegacion a {
-        text-align: left;
+        text-align: left; /* Alinea a la izquierda */
     }
 }
-/* alineacion para celulares */
 
+/* Alineación para celulares */
 .navegacion a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 2.2rem;
-    margin: 5px;
-    display: block;
-    padding: 1rem;
-    margin: 3rem;
-    margin-left: 3rem;
-    transition: ease-in-out;
-    text-align: center;
+    color: var(--blanco); /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 2.2rem; /* Tamaño de fuente */
+    margin: 5px; /* Margen */
+    display: block; /* Bloque */
+    padding: 1rem; /* Espaciado interno */
+    margin: 3rem; /* Margen */
+    margin-left: 3rem; /* Margen izquierdo */
+    transition: ease-in-out; /* Transición suave */
+    text-align: center; /* Centra el texto */
 }
 
+/* Estilos para la navegación */
 .navegacion {
-    position: absolute;
+    position: absolute; /* Posicionamiento absoluto */
     top: 0;
     right: 0;
     bottom: 0;
-    height: 100vh;
-    width: 35rem;
-    padding: 3rem, 4rem;
-    background-color: var(--negro);
-    animation: desplazarIzquierda .3s ease-in-out;
+    height: 100vh; /* Altura completa */
+    width: 35rem; /* Ancho fijo */
+    padding: 3rem, 4rem; /* Espaciado interno */
+    background-color: var(--negro); /* Fondo negro */
+    animation: desplazarIzquierda .3s ease-in-out; /* Animación */
 }
 
-.navegacion a:nth-child(even):hover{
-    color: red;
+/* Efectos hover para enlaces de navegación */
+.navegacion a:nth-child(even):hover {
+    color: red; /* Cambia a rojo al pasar el mouse */
 }
-.navegacion a:nth-child(odd):hover{
-    color: var(--verde);
+.navegacion a:nth-child(odd):hover {
+    color: var(--verde); /* Cambia a verde al pasar el mouse */
 }
 
+/* Estilo para el icono de hamburguesa */
 .hamburguesa:hover {
-    cursor: pointer;
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 .hamburguesa span {
-    background-color: var(--blanco);
-    display: block;
-    width: 5rem;
-    height: .5rem;
-    margin-bottom: .5rem;
-
+    background-color: var(--blanco); /* Fondo blanco */
+    display: block; /* Bloque */
+    width: 5rem; /* Ancho */
+    height: .5rem; /* Alto */
+    margin-bottom: .5rem; /* Margen inferior */
 }
 
-/* video */
-
+/* Estilos para el video */
 .contenido-header {
-    position: relative;
-    /* contenedor padre */
+    position: relative; /* Posicionamiento relativo */
 }
 
+/* Oscurece el video */
 .contenido-header::before {
-    /* contenedor hijo */
-    content: '';
-    position: absolute;
+    content: ''; /* Contenido vacío */
+    position: absolute; /* Posicionamiento absoluto */
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, .5);
-    /* oscurece el video */
-
+    background-color: rgba(0, 0, 0, .5); /* Fondo oscuro */
 }
 
-.texto-encabezado{
-    position: absolute; /* para que se ponga encima del video */
-    z-index: 2; /* para que se vea encima del video */
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;/* para que se ubique uno al lado del otro */
-    text-align: center;
-    justify-content: center;
-
+/* Estilo para el encabezado del video */
+.texto-encabezado {
+    position: absolute; /* Posicionamiento absoluto */
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
+    width: 100%; /* Ancho completo */
+    height: 80%; /* Altura del 80% */
+    display: flex; /* Flexbox para disposición */
+    flex-direction: column; /* Coloca elementos uno al lado del otro */
+    text-align: center; /* Centra el texto */
+    justify-content: center; /* Centra verticalmente */
 }
 
+/* Estilo para el título del encabezado */
 .texto-encabezado h2 {
-
-    color: var(--blanco);
-    font-size: 8rem;
+    color: var(--blanco); /* Color blanco */
+    font-size: 8rem; /* Tamaño de fuente */
 }
 
-video{
-    width: 100%;
-    height: 100%;
+/* Consulta de medios para pantallas más grandes */
+@media(min-width: 768px) {
+    /* Aquí se pueden agregar estilos específicos para pantallas más grandes */
+}
+
+/* Estilos para el video */
+video {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
 }

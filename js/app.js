@@ -2,6 +2,7 @@ console.log('hola');
 const menu = document.querySelector('.hamburguesa');
 console.log(menu);
 const navegacion =document.querySelector('.navegacion');
+const imagenes = document.querySelectorAll('img'); /* selecciona todas las imagenes que esten y que se agreguen */
 
 document.addEventListener('DOMContentLoaded',()=> {
     eventos();
@@ -30,6 +31,10 @@ const botonCerrar = () => {
     navegacion.appendChild(btnCerrar);
     cerrarMenu(btnCerrar,overlay);
 }
+
+imagenes.forEach(imagen=> {
+   imagen.src = imagen.dataset.src; /* en el html se agrega el data-src */
+});
 
 const cerrarMenu = (boton,overlay) => {
     boton.addEventListener('click',() => {

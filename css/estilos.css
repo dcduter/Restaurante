@@ -61,7 +61,8 @@ p.texto-pizza {
     text-transform: lowercase; /* Texto en minúscula */
   }
    
-  p.texto-pizza:first-letter { /* permite personalizar la primera letra en este caso en mayúscula */
+  p.texto-pizza:first-letter { 
+    /* permite personalizar la primera letra en este caso en mayúscula */
     text-transform: uppercase; 
   }
 
@@ -396,4 +397,17 @@ video {
     .botones-platillos button {
         flex:unset;
     }
+}
+
+/* platillos */
+
+.platillos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.platillo img {
+    height: 400px;
+    width: 600px;
 }
